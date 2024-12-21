@@ -65,4 +65,34 @@ main hr {
 .secondSection {
   max-width: 80vw;
   margin: auto;
+  height: 80vh;
+}
+.secondSection h1{
+    font-size: 1.9rem;
+}
+.secondSection .box {
+    background-color: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0px;
+    display: flex;
+}
+.secondSection .vertical{
+height: 80px;
+width: 1px;
+background-color: white;
+margin: 0 180px;
+}
+.vertical-title{
+    position: relative;
+    top: 80px;
+    left: -34px;
+}
+.vertical-desc{
+    position: relative;
+    top: 79px;
+    width: 226px;
+    color: gray;
+    font-size: 13px;
+    left: -34px;
 }
