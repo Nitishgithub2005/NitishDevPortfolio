@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(27, 9, 58);
+    background-color: rgb(18, 7, 36);
     color: white;
     font-family: "poppins", serif;
 }
@@ -13,7 +13,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 80px;
-    background-color: rgb(38, 24, 96);
+    background-color: rgb(20, 9, 67);
 }
 nav ul{
     display: flex; /* flex container arranges the items (Item 1, Item 2, Item 3) horizontally in a row. */
@@ -26,6 +26,9 @@ nav ul li{
 nav ul li a{
     text-decoration: none;  
    color: white; 
+}
+nav ul li a:hover{ 
+   color: rgb(17, 64, 158); 
 }
 .left{
     font-size: 1.6rem; 
@@ -47,4 +50,11 @@ font-size: 3rem;
 }
 .purple{
     color: rgb(137, 125, 226);
+}
+#element{
+    color: rgb(137, 125, 226);
+}
+.secondSection{
+    max-width: 80vw;
+    margin: auto;
 }

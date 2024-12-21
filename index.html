@@ -8,28 +8,41 @@
   </head>
   <body>
     <header>
-        <nav>
-            <div class="left">Nitish's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Education</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact me</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav>
+        <div class="left">Nitish's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Education</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="firstSection">
-                <div class="leftSection">Hi, I am <span class="purple">Nitish</span>
-                <div>I am aspiring web developer</div>
-            </div>
-                <div class="rightSection">
-                    <img src="myphoto.png">
-                </div>
-        </section>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, I am <span class="purple">Nitish</span>
+          <div>I am aspiring <span id="element"></span></div>
+        </div>
+        <div class="rightSection">
+          <img src="myphoto.png" />
+        </div>
+      </section>
+      <section class="secondSection">
+        <h1>Education</h1>
+    </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web developer", "Porblem Solver", "Student"],
+        typeSpeed: 90,
+      });
+    </script>
   </body>
 </html>
