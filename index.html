@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Nitish's Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -73,6 +74,27 @@
         </div>
       </section>
     </main>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-info">
+            <h3>Contact me</h3>
+            <p>Email: <a href="mailto:nitishmaladakar@gmail.com">nitishmaladakar@gmail.com</a></p>
+            <p>Phone: 76763-07712</p>
+          </div>
+          <div class="footer-social">
+            <h3>Follow me</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/nitish-r-maladakar-228852259/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://x.com/Nitish_RM" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://github.com/Nitishgithub2005" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 | www.NitishDevPortfolio.com | All rights reserved Designed By <b>Nitish</b>.</p>
+        </div>
+      </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- Setup and start animation! -->
@@ -81,6 +103,17 @@
         strings: ["Web developer", "Porblem Solver", "Student"],
         typeSpeed: 90,
       });
+      // JavaScript for Scroll effect
+      window.onscroll = function () {
+        var nav = document.querySelector("nav");
+
+        // If the page is scrolled down by more than 50px, shrink the navbar
+        if (window.scrollY > 50) {
+          nav.classList.add("shrink");
+        } else {
+          nav.classList.remove("shrink");
+        }
+      };
     </script>
   </body>
 </html>

@@ -8,30 +8,139 @@ body {
   color: white;
   font-family: "poppins", serif;
 }
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-  background: linear-gradient(44deg, rgb(3, 9, 61), rgb(116, 24, 162));
-}
-nav ul {
-  display: flex; /* flex container arranges the items (Item 1, Item 2, Item 3) horizontally in a row. */
-  justify-content: center;
-}
-nav ul li {
-  list-style: none; /*this will remove the bullet points from list */
-  margin: 0 23px; /* this sets the margin of top-bottom to 0px and 23px for left and right*/
-}
-nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-nav ul li a:hover {
-  color: rgb(112, 96, 184);
-}
 
----------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------ */
+/* new css for navbar */
+/* Floating Navbar with Modern Effects */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(45deg, rgb(3, 9, 61), rgb(116, 24, 162));
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Keeps navbar on top */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Elevates navbar */
+    backdrop-filter: blur(15px); /* Glassy effect */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
+    padding: 0 20px;
+    width: 100%;
+    opacity: 0.95; /* Slight transparency */
+    transform: translateY(0); /* Smooth transformation on scroll */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border at the bottom */
+  }
+  
+  nav:hover {
+    background: linear-gradient(45deg, rgb(116, 24, 162), rgb(3, 9, 61)); /* Gradient reverse on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+  
+  nav.shrink {
+    height: 60px;
+    padding: 0 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shrunk navbar shadow */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin: 0 30px;
+    position: relative;
+    transition: all 0.3s ease; /* Transition for hover effects */
+  }
+  
+  nav ul li:hover {
+    transform: scale(1.1) rotate(5deg); /* Slight zoom and rotation for hover effect */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.2s ease;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    transform: translateY(-5px); /* Moves upward on hover */
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); /* Glowing effect */
+    letter-spacing: 3px; /* Wider letters on hover */
+  }
+  
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background: rgb(112, 96, 184);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+  }
+  
+  nav ul li a:active {
+    color: rgb(112, 96, 184);
+    transform: scale(0.95);
+  }
+  
+  nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 9, 61, 0.3);
+    z-index: -1;
+    animation: backgroundMove 8s ease-in-out infinite;
+  }
+  
+  @keyframes backgroundMove {
+    0% {
+      background: rgba(3, 9, 61, 0.5);
+    }
+    50% {
+      background: rgba(116, 24, 162, 0.5);
+    }
+    100% {
+      background: rgba(3, 9, 61, 0.5);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 10px;
+      height: 60px;
+    }
+  
+    nav ul li {
+      margin: 0 15px;
+    }
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------------------------------------ */
+
 .left {
   font-size: 1.6rem;
 }
@@ -114,3 +223,99 @@ main hr {
   font-size: 13px;
   left: -34px;
 }
+
+  /* ------------------------------------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------------------------------------ */
+/* CSS for my footer */
+
+
+footer {
+    background: linear-gradient(45deg, rgb(3, 9, 61), rgb(116, 24, 162));
+    color: white;
+    padding: 40px 20px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    backdrop-filter: blur(15px); /* Glass effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .footer-info,
+  .footer-social {
+    width: 45%;
+  }
+  
+  .footer-info h3,
+  .footer-social h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .footer-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .footer-info a {
+    color: rgb(112, 96, 184);
+    text-decoration: none;
+  }
+  
+  .footer-info a:hover {
+    color: white;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-social ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-social ul li a {
+    color: rgb(112, 96, 184);
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .footer-social ul li a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-info,
+    .footer-social {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* ------------------------------------------------------------------------------------------------------ */
