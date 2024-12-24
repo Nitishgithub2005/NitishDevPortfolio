@@ -9,8 +9,10 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="left">Nitish's Portfolio</div>
+      <nav class="main-nav">
+        <div class="left">
+            <span class="hover-text">Nitish</span>'s Portfolio
+        </div>
         <div class="right">
           <ul>
             <li><a href="/">Home</a></li>
@@ -32,7 +34,7 @@
               href="https://drive.google.com/file/d/1s-9l9wZ0wEx63SvJTv3R94X_ZqZlngqW/view?usp=sharing"
               target="_blank"
             >
-              <button class="btn">Download Resume</button>
+              <button class="btn">Resume</button>
             </a>
             <a href="https://github.com/Nitishgithub2005" target="_blank">
               <button class="btn">Github</button>
@@ -75,26 +77,39 @@
       </section>
     </main>
 
-    <footer>
-        <div class="footer-container">
-          <div class="footer-info">
-            <h3>Contact me</h3>
-            <p>Email: <a href="mailto:nitishmaladakar@gmail.com">nitishmaladakar@gmail.com</a></p>
-            <p>Phone: 76763-07712</p>
-          </div>
-          <div class="footer-social">
-            <h3>Follow me</h3>
-            <ul>
-              <li><a href="https://www.linkedin.com/in/nitish-r-maladakar-228852259/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a></li>
-              <li><a href="https://x.com/Nitish_RM" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="https://github.com/Nitishgithub2005" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a></li>
-            </ul>
-          </div>
+    <footer class="footer-container">
+        <div class="contactme-section">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/xrbbzdbk" method="POST">
+            <label>Your email: <input type="email" placeholder="Enter your email" class="contactme-input" name="email" required></label>
+            <label> Your message: <textarea  placeholder="Enter your message" class="contactme-input" name="message"  required></textarea></label>
+            <!-- your other form fields go here -->
+            <button type="submit" class="contactme-button">Send</button>
+          </form>
         </div>
+
+        <nav class="footer-nav">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Education</a>
+                <a href="#">Contact me</a>
+            </div>
+            <div class="social-icons">
+           <a href="https://x.com/Nitish_RM" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://github.com/Nitishgithub2005" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nitish-r-maladakar-228852259/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </nav>
+        
         <div class="footer-bottom">
-          <p>&copy; 2024 | www.NitishDevPortfolio.com | All rights reserved Designed By <b>Nitish</b>.</p>
+            <div class="copyright">© 2024 Nitish's Portfolio | All rights reserved.</div>
+            <div class="legal-links">
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
         </div>
-      </footer>
+    </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- Setup and start animation! -->
@@ -114,6 +129,7 @@
           nav.classList.remove("shrink");
         }
       };
+     
     </script>
   </body>
 </html>
